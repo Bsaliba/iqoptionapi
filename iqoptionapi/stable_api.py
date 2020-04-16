@@ -785,7 +785,7 @@ class IQ_Option:
                 if "message" in self.api.buy_multi_option[req_id].keys():
                     logging.error(
                         '**warning** buy'+str(self.api.buy_multi_option[req_id]["message"]))
-                    return False, self.api.buy_multi_option[req_id]["message"]
+                    return False, self.api.buy_multi_option[req_id]["message"], self.api.buy_multi_option[req_id]
             except:
                 pass
             try:
@@ -794,9 +794,9 @@ class IQ_Option:
                 pass
             if time.time()-start_t >= 5:
                 logging.error('**warning** buy late 5 sec')
-                return False, None
+                return False, None, None
 
-        return self.api.result, self.api.buy_multi_option[req_id]["id"]
+        return self.api.result, self.api.buy_multi_option[req_id]["id"], self.api.buy_multi_option[req_id]
 
     def buy(self, price, ACTIVES, ACTION, expirations):
         self.api.buy_multi_option = {}
@@ -814,7 +814,7 @@ class IQ_Option:
         while self.api.result == None or id == None:
             try:
                 if "message" in self.api.buy_multi_option[req_id].keys():
-                    return False, self.api.buy_multi_option[req_id]["message"]
+                    return False, self.api.buy_multi_option[req_id]["message"], self.api.buy_multi_option[req_id]
             except:
                 pass
             try:
@@ -823,9 +823,9 @@ class IQ_Option:
                 pass
             if time.time()-start_t >= 5:
                 logging.error('**warning** buy late 5 sec')
-                return False, None
+                return False, None, None
 
-        return self.api.result, self.api.buy_multi_option[req_id]["id"]
+        return self.api.result, self.api.buy_multi_option[req_id]["id"], self.api.buy_multi_option[req_id]
 
     def sell_option(self, options_ids):
         self.api.sell_option(options_ids)
