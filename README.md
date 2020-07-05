@@ -1,18 +1,9 @@
 # Iqoption API
 
-Free version is late with private about 10 version
+great robot
+https://npt-life.com/iq-option-robot
 
-## Private version (Advance Support) 
-
-* 250USD per month
-
-* real time fix bug and support
-
-* teach how to build your own product
-
-* protect your product
-
-* Build you own Copy trade product 3000usd
+Stop sell private version now
 
 ## Document
 
